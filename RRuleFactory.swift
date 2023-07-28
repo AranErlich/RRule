@@ -34,12 +34,15 @@ struct RRuleFactory {
     }
     
     enum Frequency: RRuleGenerative {
-        /// 1-999 hours
+        /// 1-999 hours, use CycleRepeat
         case hourly(RRuleGenerative)
-        /// 1-999 days
+        /// 1-999 days, use CycleRepeat
         case daily(RRuleGenerative)
+        /// use WeeklyRepeat object
         case weekly(RRuleGenerative)
+        /// use MonthlyRepeat object
         case monthly(RRuleGenerative)
+        /// use YearlyRepeat object
         case yearly(RRuleGenerative)
         
         var rawValue: String {
