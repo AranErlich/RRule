@@ -7,10 +7,6 @@ RFC 5545 documentation: https://datatracker.ietf.org/doc/html/rfc5545
 
 exaples:
 
-Hourly:
-let rFactory = RRuleFactory(freq: .hourly(RRuleFactory.CycleRepeat(every: 1)), end: .after(48))
-will generate: "RRULE:FREQ=HOURLY;INTERVAL=1;COUNT=48"
-
 Daily:
 let rFactory = RRuleFactory(freq: .daily(RRuleFactory.CycleRepeat(every: 2)), end: .onDate(Date.now)) -> will generate: "RRULE:FREQ=DAILY;INTERVAL=2;UNTIL=20230728T000000Z"
 
